@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<div class="listContainer">
+  {{#each list}}
+    <div class="item {{#if status}}ok{{else}}late{{/if}}">
+      <div class="itemContents">
+        Ward {{wardNumber}}<br />
+        <form action="admin" method="post">
+          <input type="text" name="wardNumber" value={{wardNumber}} style="display:none">
+          <input type="number" name="timeDelay" value={{timeDelay}}>
+          <input type="submit">
+        </form>
+      </div>
+    </div>
+  {{/each}}
+</div>

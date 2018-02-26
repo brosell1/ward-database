@@ -1,0 +1,16 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<div class="listContainer">
+  {{#each list}}
+    <div class="item {{#if status}}ok{{else}}late{{/if}}">
+      <div class="itemContents">
+        Ward {{wardNumber}}<br />
+        {{#if timeDelay}}
+          {{timeDelay}} minutes
+        {{else}}
+          On Time
+        {{/if}}
+      </div>
+    </div>
+  {{/each}}
+</div>
